@@ -1,0 +1,9 @@
+E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/CMakeFiles/SolarSystem.dir
+E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/CMakeFiles/edit_cache.dir
+E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/CMakeFiles/list_install_components.dir
+E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/CMakeFiles/install.dir
+E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/CMakeFiles/install/local.dir
+E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/CMakeFiles/install/strip.dir
+E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/CMakeFiles/SolarSystem_autogen_timestamp_deps.dir
+E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/CMakeFiles/SolarSystem_autogen.dir
