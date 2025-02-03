@@ -3,12 +3,14 @@
 #define SATELLITE_H
 
 #include "celestialbody.h"
+#include <QOpenGLShaderProgram>
+#include <QMatrix4x4>
 
 class Satellite : public CelestialBody
 {
 public:
     Satellite(float radius, float distanceFromPlanet, const QColor& color, float rotationSpeed);
-    void draw() override; // Переопределяем функцию draw()
+    void draw(QOpenGLShaderProgram *shaderProgram, const QMatrix4x4& modelViewMatrix) override;
     float getDistanceFromPlanet() const;
     float getRotationSpeed() const;
 private:

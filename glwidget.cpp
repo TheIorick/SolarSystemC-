@@ -4,6 +4,9 @@
 #include <QTextStream>
 #include <QDebug>
 #include <QtMath>
+#include "planet.h"
+#include "sun.h"
+#include "satellite.h"
 
 // Конструктор GLWidget
 GLWidget::GLWidget(QWidget *parent)
@@ -180,9 +183,10 @@ void GLWidget::paintGL()
     modelViewMatrix.rotate(xRot, QVector3D(1.0f, 0.0f, 0.0f));
     modelViewMatrix.rotate(yRot, QVector3D(0.0f, 1.0f, 0.0f));
     shaderProgram->setUniformValue("projectionMatrix", projectionMatrix);
+    shaderProgram->setUniformValue("modelViewMatrix", modelViewMatrix);
 
     glBindVertexArray(VAO);
-    // Получаем позицию солнца в мировых координатах
+        // Получаем позицию солнца в мировых координатах
     QVector3D sunPosition = QVector3D(0.0f, 0.0f, 0.0f);
     QMatrix4x4 sunModelMatrix;
     sunModelMatrix.setToIdentity(); // Матрица модели солнца
@@ -193,15 +197,13 @@ void GLWidget::paintGL()
     // Отрисовка небесных тел
     for (int i = 0; i < celestialBodies.size(); ++i) {
         CelestialBody *body = celestialBodies[i];
+
         QMatrix4x4 planetModelViewMatrix = modelViewMatrix;
-        shaderProgram->setUniformValue("modelViewMatrix", planetModelViewMatrix);
 
         // Вращаем планету вокруг Солнца
         if (i > 0) { // Не вращаем Солнце
             planetModelViewMatrix.rotate(planetAngles[i], QVector3D(0.0f, 1.0f, 0.0f));
         }
-        QVector3D planetPosition = QVector3D(body->getDistanceFromSun(), 0.0f, 0.0f);
-        planetPosition = planetModelViewMatrix.map(planetPosition);
 
         // Рисуем кольца Сатурна
         if (i == 6) { // Сатурн имеет индекс 6
@@ -218,16 +220,13 @@ void GLWidget::paintGL()
             drawRings(2.4f, 3.0f, 0.0f);
         }
 
-
-        QColor color = body->getColor();
-        QVector3D planetColor(color.redF(), color.greenF(), color.blueF());
-        shaderProgram->setUniformValue("color", planetColor);
-
         // Настраиваем источник света и тени
         QVector3D lightDir;
         float ambientStrength;
         bool isShadowed;
 
+        QVector3D planetPosition = QVector3D(body->getDistanceFromSun(), 0.0f, 0.0f);
+        planetPosition = planetModelViewMatrix.map(planetPosition);
         if (i == 0) // Для солнца
         {
             lightDir = QVector3D(0, 0, 0) - planetPosition;
@@ -240,7 +239,6 @@ void GLWidget::paintGL()
             ambientStrength = 0.2f;
             isShadowed = shadows[i];
         }
-
         // передаем направление света в мировых координатах
         QMatrix4x4 normalMatrix = modelViewMatrix.inverted().transposed();
         QVector3D transformedLightDir = (normalMatrix * QVector4D(lightDir, 0.0f)).toVector3D();
@@ -250,37 +248,12 @@ void GLWidget::paintGL()
         shaderProgram->setUniformValue("ambientStrength", ambientStrength);
         shaderProgram->setUniformValue("shadowed", isShadowed);
 
-        planetModelViewMatrix.translate(body->getDistanceFromSun(), 0.0f, 0.0f);
-        planetModelViewMatrix.scale(body->getRadius());
-        shaderProgram->setUniformValue("modelViewMatrix", planetModelViewMatrix);
-
-        glDrawArrays(GL_TRIANGLE_STRIP, 0, vertices.size());
-
-        // Отрисовка спутников
-        if(dynamic_cast<Planet*>(body))
-        {
-            Planet* planet = dynamic_cast<Planet*>(body);
-            const QVector<Satellite*> &satellites = planet->getSatellites();
-            for (int j = 0; j < satellites.size(); ++j) {
-                Satellite *satellite = satellites[j];
-                QColor satelliteColor = satellite->getColor();
-                QVector3D satColor(satelliteColor.redF(), satelliteColor.greenF(), satelliteColor.blueF());
-                shaderProgram->setUniformValue("color", satColor);
-                shaderProgram->setUniformValue("shadowed", false);
-                QMatrix4x4 satelliteModelViewMatrix = planetModelViewMatrix;
-                satelliteModelViewMatrix.rotate(planetAngles[i], QVector3D(0.0f, 1.0f, 0.0f)); //Вращение спутника вместе с планетой
-                satelliteModelViewMatrix.rotate(satelliteAngles[i][j], QVector3D(0.0f, 1.0f, 0.0f)); //Вращение спутника вокруг планеты
-                satelliteModelViewMatrix.translate(satellite->getDistanceFromPlanet(), 0.0f, 0.0f);
-                satelliteModelViewMatrix.scale(satellite->getRadius());
-                shaderProgram->setUniformValue("modelViewMatrix", satelliteModelViewMatrix);
-                glDrawArrays(GL_TRIANGLE_STRIP, 0, vertices.size());
-            }
-        }
-
+        body->draw(shaderProgram, planetModelViewMatrix);
     }
     glBindVertexArray(0);
     shaderProgram->release();
 }
+
 // Обработка нажатия кнопки мыши
 void GLWidget::mousePressEvent(QMouseEvent *event)
 {
@@ -448,6 +421,7 @@ void GLWidget::calculateShadows()
         if (i > 0) {
             modelMatrix.rotate(planetAngles[i], QVector3D(0.0f, 1.0f, 0.0f));
         }
+
         QVector3D planetPosition = QVector3D(body->getDistanceFromSun(), 0.0f, 0.0f);
         planetPosition = modelMatrix.map(planetPosition);
 

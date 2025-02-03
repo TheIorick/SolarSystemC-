@@ -2,12 +2,13 @@
 #define SUN_H
 
 #include "celestialbody.h"
-
+#include <QOpenGLShaderProgram>
+#include <QMatrix4x4>
 class Sun : public CelestialBody
 {
 public:
     Sun(float radius, float distanceFromSun, const QColor& color);
-    void draw() override; // Переопределяем функцию draw()
+    void draw(QOpenGLShaderProgram *shaderProgram, const QMatrix4x4& modelViewMatrix) override;
 
 private:
          // Здесь могут быть дополнительные свойства, специфичные для солнца

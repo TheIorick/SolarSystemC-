@@ -14,12 +14,10 @@
 #include <QTimer>
 
 #include "celestialbody.h"
-#include "planet.h"
-#include "sun.h"
 
 class GLWidget : public QOpenGLWidget, protected QOpenGLFunctions_3_3_Core
 {
-    Q_OBJECT
+    Q_OBJECT;
 
 public:
     void setRotationSpeed(int speed);

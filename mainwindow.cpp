@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     speedSlider = new QSlider(Qt::Horizontal, this);
     speedSlider->setMinimum(0);
     speedSlider->setMaximum(200);
-    speedSlider->setValue(0); // Начальное значение
+    speedSlider->setValue(20); // Начальное значение
 
     QLabel* speedLabel = new QLabel("Animation Speed:");
 

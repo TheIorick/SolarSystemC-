@@ -3,6 +3,8 @@
 
 #include <QVector3D>
 #include <QColor>
+#include <QOpenGLShaderProgram>
+#include <QMatrix4x4>
 
 class CelestialBody
 {
@@ -10,7 +12,7 @@ public:
     CelestialBody(float radius, float distanceFromSun, const QColor& color);
     virtual ~CelestialBody() = default;
 
-    virtual void draw() = 0; // Чисто виртуальная функция, должна быть реализована в дочерних классах
+    virtual void draw(QOpenGLShaderProgram *shaderProgram, const QMatrix4x4& modelViewMatrix) = 0; // Чисто виртуальная функция, должна быть реализована в дочерних классах
 
     float getRadius() const { return radius; }
     float getDistanceFromSun() const { return distanceFromSun; }

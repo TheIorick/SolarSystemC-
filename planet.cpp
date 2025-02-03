@@ -1,6 +1,10 @@
 // planet.cpp
 #include "planet.h"
 #include <cmath>
+#include <QOpenGLShaderProgram>
+#include "satellite.h"
+#include <QOpenGLFunctions>
+#include <QMatrix4x4>
 
 Planet::Planet(float radius, float distanceFromSun, const QColor& color)
     : CelestialBody(radius, distanceFromSun, color)
@@ -37,9 +41,28 @@ Planet::Planet(float radius, float distanceFromSun, const QColor& color)
     rotationSpeed = 360.0f / (orbitalPeriod * daysInYear * secondsInDay) * planetCoefSpeed;
 }
 
-void Planet::draw()
+void Planet::draw(QOpenGLShaderProgram *shaderProgram, const QMatrix4x4& modelViewMatrix)
 {
-    // Рисование будет в GLWidget.
+    QOpenGLFunctions *f = QOpenGLContext::currentContext()->functions();
+    QColor color = getColor();
+    QVector3D planetColor(color.redF(), color.greenF(), color.blueF());
+    shaderProgram->setUniformValue("color", planetColor);
+
+
+    QMatrix4x4 planetModelViewMatrix = modelViewMatrix;
+    // Вращаем планету вокруг Солнца
+    planetModelViewMatrix.rotate(0, QVector3D(0.0f, 1.0f, 0.0f));
+    planetModelViewMatrix.translate(getDistanceFromSun(), 0.0f, 0.0f);
+    planetModelViewMatrix.scale(getRadius());
+    shaderProgram->setUniformValue("modelViewMatrix", planetModelViewMatrix);
+    f->glDrawArrays(GL_TRIANGLE_STRIP, 0, 37 * 37 * 2);
+
+    // Отрисовка спутников
+    const QVector<Satellite*> &satellites = getSatellites();
+    for (int j = 0; j < satellites.size(); ++j) {
+        Satellite *satellite = satellites[j];
+        satellite->draw(shaderProgram, planetModelViewMatrix);
+    }
 }
 
 void Planet::addSatellite(Satellite *satellite)

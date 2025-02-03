@@ -2,9 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "glwidget.h"
 #include <QSlider>
 
+class GLWidget; // Forward declaration
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
