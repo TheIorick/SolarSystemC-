@@ -13,10 +13,13 @@ public:
     void draw() override; // Переопределяем функцию draw()
     void addSatellite(Satellite *satellite);
     const QVector<Satellite*>& getSatellites() const;
-
-
+    float getRotationSpeed() const;
 private:
     QVector<Satellite*> satellites;
+    float rotationSpeed;
+    static constexpr float daysInYear = 365.25f;
+    static constexpr float secondsInDay = 86400.0f;
+    static constexpr float planetCoefSpeed = 300000.0f;
 };
 
 #endif // PLANET_H

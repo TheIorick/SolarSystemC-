@@ -19,6 +19,7 @@ qt_add_executable(SolarSystem
     sun.h sun.cpp
     resources.qrc
     satellite.h satellite.cpp
+    .gitignore
 
 )
 

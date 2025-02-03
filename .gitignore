@@ -1,0 +1,54 @@
+# Игнорировать файлы сборки и папки
+build/
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.dll
+*.obj
+*.lib
+*.pdb
+*.ilk
+*.exp
+*.manifest
+*.cmake
+cmake_install.cmake
+CMakeFiles/
+cmake-build-*/
+*.sln
+*.suo
+
+# Игнорировать файлы пользовательских настроек IDE
+*.user
+*.vcxproj.user
+*.vcxproj.filters
+*.code-workspace
+*.idea/
+*.vscode/
+
+# Игнорировать временные файлы Qt
+*.ui.autosave
+*.moc
+*.rcc
+
+# Игнорировать файлы кэша
+*.[oa]
+*.stackdump
+*.swp
+*.swo
+*.log
+*.ini
+*.cache
+*.tmp
+*.bak
+
+# Игнорировать исполняемые файлы
+*.app/
+*.exe
+
+# Игнорировать файлы отладки
+*.dSYM/
+
+# Игнорировать файлы, созданные при развертывании
+deploy_script

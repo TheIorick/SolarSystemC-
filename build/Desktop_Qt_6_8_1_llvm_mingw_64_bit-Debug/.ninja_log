@@ -1,95 +1,60 @@
 # ninja log v6
-61	425	7599742611965180	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-61	425	7599742611965180	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-61	425	7599742611965180	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-61	425	7599742611965180	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
+55	259	7599754764531175	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
+55	259	7599754764531175	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
+55	259	7599754764531175	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
+55	259	7599754764531175	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
 1521	7128	7599641282906961	CMakeFiles/SolarSystem.dir/SolarSystem_autogen/mocs_compilation.cpp.obj	3395aa4117f1bf6f
 1530	7064	7599641283012245	CMakeFiles/SolarSystem.dir/main.cpp.obj	641ab9512549d32d
 287	4361	7599665905725177	CMakeFiles/SolarSystem.dir/mainwindow.cpp.obj	74125b6ff599555
-4357	4505	7599742654927145	SolarSystem.exe	8c1d918985dcaa54
-426	4357	7599742615622802	CMakeFiles/SolarSystem.dir/glwidget.cpp.obj	e2601f95a5c639a3
+3955	4097	7599754803530432	SolarSystem.exe	8c1d918985dcaa54
+260	3955	7599754766579635	CMakeFiles/SolarSystem.dir/glwidget.cpp.obj	e2601f95a5c639a3
 6	180	7593731949144790	CMakeFiles/clean.additional	a62471dd3f3454b7
 181	224	7593731950889525	clean	3ba67db5e55c31f2
 3611	11696	7593731991688660	CMakeFiles/SolarSystem.dir/celestialbody.cpp.obj	5d23a5ba7519fec0
 3618	13587	7593731991759830	CMakeFiles/SolarSystem.dir/sun.cpp.obj	2b8424cd9c067e3a
-344	412	7599741443449076	CMakeFiles/SolarSystem.dir/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp.obj	353c1cfe267bfd4d
-1679	4982	7596344941970926	CMakeFiles/SolarSystem.dir/planet.cpp.obj	ce5808a85c5da30
-277	339	7599741443302516	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-24	2183	7599639686631783	build.ninja	a374b9df81fe3257
-277	339	7599741443302516	SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-1684	4834	7596344942031177	CMakeFiles/SolarSystem.dir/satellite.cpp.obj	11eb5926cf531b43
-52	228	7599744429578757	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-52	228	7599744429578757	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-52	228	7599744429578757	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-52	228	7599744429578757	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-229	301	7599744431958359	SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-229	301	7599744431958359	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-305	368	7599744432115903	CMakeFiles/SolarSystem.dir/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp.obj	353c1cfe267bfd4d
-301	3668	7599744432070241	CMakeFiles/SolarSystem.dir/glwidget.cpp.obj	e2601f95a5c639a3
-44	225	7599744596037278	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-44	225	7599744596037278	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-44	225	7599744596037278	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-44	225	7599744596037278	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-226	3775	7599744597863188	CMakeFiles/SolarSystem.dir/glwidget.cpp.obj	e2601f95a5c639a3
-3775	3909	7599744633352426	SolarSystem.exe	8c1d918985dcaa54
-15	82	7599744891048674	SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-15	82	7599744891048674	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-82	142	7599744891164114	CMakeFiles/SolarSystem.dir/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp.obj	353c1cfe267bfd4d
-142	278	7599744891756451	SolarSystem.exe	8c1d918985dcaa54
-43	241	7599746533686524	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-43	241	7599746533686524	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-43	241	7599746533686524	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-43	241	7599746533686524	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-242	306	7599746536210040	SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-242	306	7599746536210040	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-310	372	7599746536351669	CMakeFiles/SolarSystem.dir/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp.obj	353c1cfe267bfd4d
-306	3886	7599746536307017	CMakeFiles/SolarSystem.dir/glwidget.cpp.obj	e2601f95a5c639a3
-3886	4036	7599746572107477	SolarSystem.exe	8c1d918985dcaa54
-58	273	7599747327145308	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-58	273	7599747327145308	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-58	273	7599747327145308	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-58	273	7599747327145308	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-274	4087	7599747329310647	CMakeFiles/SolarSystem.dir/glwidget.cpp.obj	e2601f95a5c639a3
-4087	4267	7599747367436172	SolarSystem.exe	8c1d918985dcaa54
-53	123	7599747490079326	SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-53	123	7599747490079326	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-123	188	7599747490186809	CMakeFiles/SolarSystem.dir/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp.obj	353c1cfe267bfd4d
-189	332	7599747490850173	SolarSystem.exe	8c1d918985dcaa54
-43	119	7599747550385082	SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-43	119	7599747550385082	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-119	179	7599747550495500	CMakeFiles/SolarSystem.dir/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp.obj	353c1cfe267bfd4d
-180	332	7599747551106324	SolarSystem.exe	8c1d918985dcaa54
-17	214	7599751136823687	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-17	214	7599751136823687	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-17	214	7599751136823687	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-17	214	7599751136823687	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-215	276	7599751139337219	SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-215	276	7599751139337219	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-280	335	7599751139455129	CMakeFiles/SolarSystem.dir/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp.obj	353c1cfe267bfd4d
-276	3848	7599751139415128	CMakeFiles/SolarSystem.dir/glwidget.cpp.obj	e2601f95a5c639a3
-3848	3982	7599751175136185	SolarSystem.exe	8c1d918985dcaa54
-47	119	7599752512700423	SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-47	119	7599752512700423	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-119	182	7599752512815661	CMakeFiles/SolarSystem.dir/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp.obj	353c1cfe267bfd4d
-182	332	7599752513442615	SolarSystem.exe	8c1d918985dcaa54
-34	223	7599754211759490	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-34	223	7599754211759490	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-34	223	7599754211759490	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-34	223	7599754211759490	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-224	298	7599754214298953	SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
-224	298	7599754214298953	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
 304	444	7599754214462608	CMakeFiles/SolarSystem.dir/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp.obj	353c1cfe267bfd4d
-298	3889	7599754214404043	CMakeFiles/SolarSystem.dir/glwidget.cpp.obj	e2601f95a5c639a3
-3890	4032	7599754250327832	SolarSystem.exe	8c1d918985dcaa54
-51	260	7599754554343742	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-51	260	7599754554343742	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-51	260	7599754554343742	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-51	260	7599754554343742	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-261	3701	7599754556437371	CMakeFiles/SolarSystem.dir/glwidget.cpp.obj	e2601f95a5c639a3
-3701	3846	7599754590840193	SolarSystem.exe	8c1d918985dcaa54
-55	259	7599754764531175	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-55	259	7599754764531175	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-55	259	7599754764531175	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
-55	259	7599754764531175	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
-260	3955	7599754766579635	CMakeFiles/SolarSystem.dir/glwidget.cpp.obj	e2601f95a5c639a3
-3955	4097	7599754803530432	SolarSystem.exe	8c1d918985dcaa54
+1679	4982	7596344941970926	CMakeFiles/SolarSystem.dir/planet.cpp.obj	ce5808a85c5da30
+224	298	7599754214298953	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
+24	2183	7603033911974590	build.ninja	a374b9df81fe3257
+224	298	7599754214298953	SolarSystem_autogen/EWIEGA46WW/qrc_resources.cpp	ae89cb1cc0aaed1a
+1684	4834	7596344942031177	CMakeFiles/SolarSystem.dir/satellite.cpp.obj	11eb5926cf531b43
+49	1081	7603044847296245	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
+49	1081	7603044847296245	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
+49	1081	7603044847296245	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
+49	1081	7603044847296245	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
+1095	3490	7603044848508249	CMakeFiles/SolarSystem.dir/planet.cpp.obj	ce5808a85c5da30
+1082	4677	7603044848375782	CMakeFiles/SolarSystem.dir/SolarSystem_autogen/mocs_compilation.cpp.obj	3395aa4117f1bf6f
+1092	4726	7603044848477960	CMakeFiles/SolarSystem.dir/mainwindow.cpp.obj	74125b6ff599555
+1089	4744	7603044848446354	CMakeFiles/SolarSystem.dir/main.cpp.obj	641ab9512549d32d
+1086	5164	7603044848419435	CMakeFiles/SolarSystem.dir/glwidget.cpp.obj	e2601f95a5c639a3
+5164	5550	7603044889197541	SolarSystem.exe	8c1d918985dcaa54
+55	246	7603050321406741	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
+55	246	7603050321406741	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
+55	246	7603050321406741	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
+55	246	7603050321406741	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
+246	2154	7603050323322349	CMakeFiles/SolarSystem.dir/planet.cpp.obj	ce5808a85c5da30
+2154	2293	7603050342399861	SolarSystem.exe	8c1d918985dcaa54
+19	221	7603051896983121	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
+19	221	7603051896983121	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
+19	221	7603051896983121	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
+19	221	7603051896983121	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
+222	2170	7603051899018854	CMakeFiles/SolarSystem.dir/planet.cpp.obj	ce5808a85c5da30
+2170	2316	7603051918497291	SolarSystem.exe	8c1d918985dcaa54
+16	193	7603052623755286	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
+16	193	7603052623755286	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
+16	193	7603052623755286	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
+16	193	7603052623755286	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
+194	2061	7603052625536675	CMakeFiles/SolarSystem.dir/planet.cpp.obj	ce5808a85c5da30
+2061	2190	7603052644208066	SolarSystem.exe	8c1d918985dcaa54
+55	246	7603052875742467	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
+55	246	7603052875742467	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
+55	246	7603052875742467	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
+55	246	7603052875742467	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
+247	2166	7603052877664463	CMakeFiles/SolarSystem.dir/planet.cpp.obj	ce5808a85c5da30
+2166	2323	7603052896856675	SolarSystem.exe	8c1d918985dcaa54
+46	218	7603056124407884	SolarSystem_autogen/timestamp	b8ef2d318436d5b5
+46	218	7603056124407884	SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
+46	218	7603056124407884	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/timestamp	b8ef2d318436d5b5
+46	218	7603056124407884	E:/Project/C++/2024/year project/SolarSystem/build/Desktop_Qt_6_8_1_llvm_mingw_64_bit-Debug/SolarSystem_autogen/mocs_compilation.cpp	b8ef2d318436d5b5
+219	2109	7603056126138689	CMakeFiles/SolarSystem.dir/planet.cpp.obj	ce5808a85c5da30
+2109	2239	7603056145034195	SolarSystem.exe	8c1d918985dcaa54

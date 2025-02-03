@@ -128,19 +128,16 @@ void GLWidget::initializeGL()
     }
     // Инициализируем скорости вращения для каждой планеты
     planetRotationSpeeds.resize(celestialBodies.size());
-    planetRotationSpeeds[0] = 0.0f; // Солнце не вращается
+    for (int i = 0; i < celestialBodies.size(); i++) {
+        if(dynamic_cast<Planet*>(celestialBodies[i]))
+        {
+            planetRotationSpeeds[i] = dynamic_cast<Planet*>(celestialBodies[i])->getRotationSpeed();
+        } else
+        {
+            planetRotationSpeeds[i] = 0.0f;
+        }
 
-    float days_in_year = 365.25f;
-    float seconds_in_day = 86400.0f;
-    float planet_coef_spead = 300000.0f;
-    planetRotationSpeeds[1] = 360.0f / (0.24f * days_in_year * seconds_in_day) * planet_coef_spead; // Меркурий
-    planetRotationSpeeds[2] = 360.0f / (0.62f * days_in_year * seconds_in_day) * planet_coef_spead; // Венера
-    planetRotationSpeeds[3] = 360.0f / (1.00f * days_in_year * seconds_in_day) * planet_coef_spead; // Земля
-    planetRotationSpeeds[4] = 360.0f / (1.88f * days_in_year * seconds_in_day) * planet_coef_spead; // Марс
-    planetRotationSpeeds[5] = 360.0f / (11.86f * days_in_year * seconds_in_day) * planet_coef_spead; // Юпитер
-    planetRotationSpeeds[6] = 360.0f / (29.46f * days_in_year * seconds_in_day) * planet_coef_spead; // Сатурн
-    planetRotationSpeeds[7] = 360.0f / (84.01f * days_in_year * seconds_in_day) * planet_coef_spead; // Уран
-    planetRotationSpeeds[8] = 360.0f / (164.8f * days_in_year * seconds_in_day) * planet_coef_spead; // Нептун
+    }
 
     // Инициализируем углы для спутников
     satelliteAngles.resize(celestialBodies.size());
@@ -185,18 +182,19 @@ void GLWidget::paintGL()
     shaderProgram->setUniformValue("projectionMatrix", projectionMatrix);
 
     glBindVertexArray(VAO);
-        // Получаем позицию солнца в мировых координатах
+    // Получаем позицию солнца в мировых координатах
     QVector3D sunPosition = QVector3D(0.0f, 0.0f, 0.0f);
     QMatrix4x4 sunModelMatrix;
     sunModelMatrix.setToIdentity(); // Матрица модели солнца
     sunPosition = sunModelMatrix.map(sunPosition);
-
+    shaderProgram->setUniformValue("lightPosition", sunPosition);
+    shaderProgram->setUniformValue("viewPosition", cameraPos);
 
     // Отрисовка небесных тел
     for (int i = 0; i < celestialBodies.size(); ++i) {
         CelestialBody *body = celestialBodies[i];
-
         QMatrix4x4 planetModelViewMatrix = modelViewMatrix;
+        shaderProgram->setUniformValue("modelViewMatrix", planetModelViewMatrix);
 
         // Вращаем планету вокруг Солнца
         if (i > 0) { // Не вращаем Солнце
@@ -220,6 +218,7 @@ void GLWidget::paintGL()
             drawRings(2.4f, 3.0f, 0.0f);
         }
 
+
         QColor color = body->getColor();
         QVector3D planetColor(color.redF(), color.greenF(), color.blueF());
         shaderProgram->setUniformValue("color", planetColor);
@@ -235,8 +234,7 @@ void GLWidget::paintGL()
             ambientStrength = 1.0f;
             isShadowed = false;
 
-        }
-        else
+        } else
         {
             lightDir = (sunPosition - planetPosition).normalized();
             ambientStrength = 0.2f;
@@ -257,7 +255,6 @@ void GLWidget::paintGL()
         shaderProgram->setUniformValue("modelViewMatrix", planetModelViewMatrix);
 
         glDrawArrays(GL_TRIANGLE_STRIP, 0, vertices.size());
-
 
         // Отрисовка спутников
         if(dynamic_cast<Planet*>(body))
@@ -446,11 +443,14 @@ void GLWidget::calculateShadows()
         shadows[i] = false;
         if (i == 0) continue; // Не затеняем Солнце
         CelestialBody* body = celestialBodies[i];
-        QVector3D planetPosition = QVector3D(body->getDistanceFromSun(), 0.0f, 0.0f);
         QMatrix4x4 modelMatrix;
         modelMatrix.setToIdentity();
-        modelMatrix.rotate(planetAngles[i], QVector3D(0.0f, 1.0f, 0.0f));
-        planetPosition = modelMatrix.map(planetPosition); // Применяем вращение к позиции
+        if (i > 0) {
+            modelMatrix.rotate(planetAngles[i], QVector3D(0.0f, 1.0f, 0.0f));
+        }
+        QVector3D planetPosition = QVector3D(body->getDistanceFromSun(), 0.0f, 0.0f);
+        planetPosition = modelMatrix.map(planetPosition);
+
 
         QVector3D sunToPlanet = planetPosition - sunPosition;
         for (int j = 0; j < celestialBodies.size(); j++)
@@ -458,10 +458,12 @@ void GLWidget::calculateShadows()
             if (i == j) continue; // Не проверяем само на себя
             if (j == 0) continue; // Солнце не может блокировать свет
             CelestialBody* blockerBody = celestialBodies[j];
-            QVector3D blockerPosition = QVector3D(blockerBody->getDistanceFromSun(), 0.0f, 0.0f);
             QMatrix4x4 blockerModelMatrix;
             blockerModelMatrix.setToIdentity();
-            blockerModelMatrix.rotate(planetAngles[j], QVector3D(0.0f, 1.0f, 0.0f));
+            if (j > 0) {
+                blockerModelMatrix.rotate(planetAngles[j], QVector3D(0.0f, 1.0f, 0.0f));
+            }
+            QVector3D blockerPosition = QVector3D(blockerBody->getDistanceFromSun(), 0.0f, 0.0f);
             blockerPosition = blockerModelMatrix.map(blockerPosition);
 
             QVector3D sunToBlocker = blockerPosition - sunPosition;
@@ -485,10 +487,7 @@ void GLWidget::calculateShadows()
                         break;
                     }
                 }
-
             }
-
-
         }
     }
 }
