@@ -38,7 +38,7 @@ This project is a 3D simulation of the solar system, developed using C++, Qt, an
 2.  **Clone the repository:**
 
     ```bash
-    git clone [repository_url]
+    git clone https://github.com/TheIorick/SolarSystemC-.git
     cd SolarSystem
     ```
 3.  **Create a build directory:**
