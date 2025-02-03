@@ -20,6 +20,7 @@ qt_add_executable(SolarSystem
     resources.qrc
     satellite.h satellite.cpp
     .gitignore
+    README.md
 
 )
 
